@@ -5,7 +5,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export interface HintProps {
+interface HintProps {
   label: string;
   children: React.ReactNode;
   side?: "top" | "right" | "bottom" | "left";
@@ -17,10 +17,10 @@ export interface HintProps {
 export const Hint = ({ 
   label, 
   children, 
-  side = "bottom",
-  align = "start",
-  sideOffset = 0,
-  alignOffset = 0
+  side,
+  align,
+  sideOffset,
+  alignOffset
 }: HintProps) => {
   return (
     <TooltipProvider>
@@ -30,9 +30,9 @@ export const Hint = ({
         </TooltipTrigger>
         <TooltipContent
           className="text-white bg-black border-black"
-          side={side} 
-          align={align} 
-          sideOffset={sideOffset} 
+          side={side}
+          align={align}
+          sideOffset={sideOffset}
           alignOffset={alignOffset}
         >
           <p className="font-semibold capitalize">
