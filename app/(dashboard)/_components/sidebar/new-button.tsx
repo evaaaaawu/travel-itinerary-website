@@ -27,7 +27,7 @@ export const NewButton = () => {
           </Hint>
         </div>
       </DialogTrigger>
-      <DialogContent className="border-none flex items-center justify-center max-w-[480px]">
+      <DialogContent className="border-none flex items-center justify-center">
         <DialogTitle className="sr-only">Create Organization</DialogTitle>
         <CreateOrganization />
       </DialogContent>
