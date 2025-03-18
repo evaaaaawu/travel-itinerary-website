@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 import { OrganizationSwitcher } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Star } from "lucide-react";
+import { LayoutDashboard, Heart } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const font = Poppins({
@@ -78,7 +78,7 @@ export const OrgSidebar = () => {
             pathname: "/",
             query: { favorites: "true" }
           }}>
-            <Star className="w-4 h-4 mr-2" />
+            <Heart className="w-4 h-4 mr-2" />
             Favorite Boards
           </Link>
         </Button>
