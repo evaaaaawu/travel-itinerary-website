@@ -14,7 +14,7 @@ interface HintProps {
   alignOffset?: number;
 }
 
-export const Hint = ({ 
+export const Hint = ({
   label, 
   children, 
   side,
