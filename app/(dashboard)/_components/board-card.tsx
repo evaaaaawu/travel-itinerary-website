@@ -6,8 +6,10 @@ import { useAuth } from "@clerk/nextjs";
 import { Heart, MoreHorizontal } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Actions } from "@/components/actions";
-
+import { useApiMutation } from "@/hooks/use-api-mutation";
+import { api } from "@/convex/_generated/api";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 interface BoardCardProps {
   id: string;
@@ -29,10 +31,39 @@ export const BoardCard = ({
   isFavorite,
 }: BoardCardProps) => {
   const { userId } = useAuth();
+
   const authorLabel = authorId === userId ? "You" : authorName;
   const createdAtLabel = formatDistanceToNow(createdAt, {
     addSuffix: true,
   });
+
+  const {
+    mutate: onFavorite, 
+    pending: pendingFavorite, 
+  } = useApiMutation(api.board.favorite);
+  
+  const {
+    mutate: onUnfavorite, 
+    pending: pendingUnfavorite, 
+  } = useApiMutation(api.board.unfavorite);
+
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      onUnfavorite({ id })
+        .catch(() => toast.error("Failed to unfavorite"))
+    } else {
+      onFavorite({ id, orgId })
+        .catch(() => toast.error("Failed to favorite"))
+    }
+  };
+
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavorite();
+  };
 
   return (
     <Link href={`/board/${id}`}>
@@ -42,6 +73,8 @@ export const BoardCard = ({
             className={cn(
               "opacity-0 group-hover:opacity-100 transition absolute top-3 left-3 text-muted-foreground hover:text-red-500",
             )}
+            onClick={handleClick}
+            disabled={pendingFavorite || pendingUnfavorite}
           >
             <Heart
               className={cn(
