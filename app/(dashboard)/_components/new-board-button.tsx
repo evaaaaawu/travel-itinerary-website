@@ -40,8 +40,8 @@ export const NewBoardButton = ({
         (pending || disabled) && "opacity-75 hover:bg-blue-100 cursor-not-allowed"
       )}
     >
-      <Plus className="h-12 w-12 text-blue-300 stroke-2" />
-      <p className="text-sm text-blue-300 font-medium">
+      <Plus className="w-12 h-12 text-blue-300 stroke-2" />
+      <p className="text-sm font-medium text-blue-300">
         New Board
       </p>
     </button>

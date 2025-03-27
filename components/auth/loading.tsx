@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Loading = () => {
   return (
-    <div className="h-full w-full flex justify-center items-center">
+    <div className="flex items-center justify-center w-full h-full">
       <Image
         src="/logo.webp"
         alt="logo"

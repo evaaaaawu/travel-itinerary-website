@@ -14,7 +14,7 @@ export const EmptyOrg = () => {
       <h1 className="text-2xl font-semibold">
         Welcome to Travel World
       </h1>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-sm text-muted-foreground">
         Create a new organization to get started
       </p>
       <div className="mt-6">
@@ -22,7 +22,7 @@ export const EmptyOrg = () => {
           <DialogTrigger asChild>
             <Button size="lg">Create Organization</Button>
           </DialogTrigger>
-          <DialogContent className="border-none flex items-center justify-center">
+          <DialogContent className="flex items-center justify-center border-none">
             <DialogTitle className="sr-only">Create Organization</DialogTitle>
             <CreateOrganization />
           </DialogContent>

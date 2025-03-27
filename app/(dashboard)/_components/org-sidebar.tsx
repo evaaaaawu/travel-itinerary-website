@@ -56,12 +56,12 @@ export const OrgSidebar = () => {
           },
         }}
       />
-      <div className="space-y-1 w-full">
+      <div className="w-full space-y-1">
         <Button
           variant={favorites ? "ghost" : "secondary"}
           asChild
           size="lg"
-          className="font-normal justify-start px-2 w-full"
+          className="justify-start w-full px-2 font-normal"
         >
           <Link href="/">
             <LayoutDashboard className="w-4 h-4 mr-2" />
@@ -72,7 +72,7 @@ export const OrgSidebar = () => {
           variant={favorites ? "secondary" : "ghost"}
           asChild
           size="lg"
-          className="font-normal justify-start px-2 w-full"
+          className="justify-start w-full px-2 font-normal"
         >
           <Link href={{
             pathname: "/",

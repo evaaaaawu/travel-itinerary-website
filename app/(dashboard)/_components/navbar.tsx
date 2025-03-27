@@ -12,11 +12,11 @@ export const Navbar = () => {
   const { organization } = useOrganization();
 
   return (
-    <nav className="flex items-center gap-x-4 p-5">
+    <nav className="flex items-center p-5 gap-x-4">
       <div className="hidden lg:flex lg:flex-1">
         <SearchInput />
       </div>
-      <div className="block lg:hidden flex-1">
+      <div className="flex-1 block lg:hidden">
         <OrganizationSwitcher
           appearance={{
             elements: {

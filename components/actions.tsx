@@ -60,14 +60,14 @@ export const Actions = ({
       >
         <DropdownMenuItem
           onClick={onCopyLink}
-          className="p-3 cursor-pointer flex items-center"
+          className="flex items-center p-3 cursor-pointer"
         >
           <Link2 className="w-4 h-4" />
           Copy board link
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => onOpen(id, title)}
-          className="p-3 cursor-pointer flex items-center"
+          className="flex items-center p-3 cursor-pointer"
         >
           <Pencil className="w-4 h-4" />
           Rename
@@ -80,7 +80,7 @@ export const Actions = ({
         >
           <Button
             variant="ghost"
-            className="p-3 cursor-pointer w-full justify-start font-normal"
+            className="justify-start w-full p-3 font-normal cursor-pointer"
           >
             <Trash2 className="w-4 h-4" />
             Delete

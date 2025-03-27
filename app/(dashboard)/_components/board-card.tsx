@@ -67,8 +67,8 @@ export const BoardCard = ({
 
   return (
     <Link href={`/board/${id}`}>
-      <div className="group aspect-square border rounded-lg overflow-hidden relative flex flex-col">
-        <div className="relative flex-1 bg-blue-100 group-hover:bg-blue-950 group-hover:opacity-50 transition-colors flex items-center justify-center">
+      <div className="relative flex flex-col overflow-hidden border rounded-lg group aspect-square">
+        <div className="relative flex items-center justify-center flex-1 transition-colors bg-blue-100 group-hover:bg-blue-950 group-hover:opacity-50">
           <button
             className={cn(
               "opacity-0 group-hover:opacity-100 transition absolute top-3 left-3 text-muted-foreground hover:text-red-500",
@@ -89,10 +89,10 @@ export const BoardCard = ({
             side="right"
           >
             <button
-              className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity outline-none"
+              className="absolute transition-opacity outline-none opacity-0 top-3 right-3 group-hover:opacity-100"
             >
               <MoreHorizontal
-                className="text-white opacity-75 hover:opacity-100 transition-opacity"
+                className="text-white transition-opacity opacity-75 hover:opacity-100"
               />
             </button>
           </Actions>
@@ -110,8 +110,8 @@ export const BoardCard = ({
 
 BoardCard.Skeleton = function BoardCardSkeleton() {
   return (
-    <div className="aspect-square rounded-lg overflow-hidden">
-      <Skeleton className="h-full w-full" />
+    <div className="overflow-hidden rounded-lg aspect-square">
+      <Skeleton className="w-full h-full" />
     </div>
   );
 };

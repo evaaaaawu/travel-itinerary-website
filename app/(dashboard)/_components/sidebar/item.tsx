@@ -24,7 +24,7 @@ export const Item = ({ id, name, imageUrl }: ItemProps) => {
   };
 
   return (
-    <div className="aspect-square relative">
+    <div className="relative aspect-square">
       <Hint 
         label={name}
         side="right"
