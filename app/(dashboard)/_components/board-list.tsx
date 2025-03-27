@@ -1,11 +1,13 @@
 "use client";
 
 import { useQuery } from "convex/react";
+
 import { api } from "@/convex/_generated/api";
-import { EmptySearch } from "./empty-search";
-import { EmptyFavorites } from "./empty-favorites";
-import { EmptyBoards } from "./empty-boards";
+
 import { BoardCard } from "./board-card";
+import { EmptyBoards } from "./empty-boards";
+import { EmptyFavorites } from "./empty-favorites";
+import { EmptySearch } from "./empty-search";
 import { NewBoardButton } from "./new-board-button";
 
 interface BoardListProps {

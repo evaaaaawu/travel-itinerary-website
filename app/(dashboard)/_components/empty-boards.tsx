@@ -1,11 +1,12 @@
 "use client";
 
-import { useApiMutation } from "@/hooks/use-api-mutation";
-import { api } from "@/convex/_generated/api";
-import { Button } from "@/components/ui/button";
-import { LayoutDashboard } from "lucide-react";
 import { useOrganization } from "@clerk/nextjs";
+import { LayoutDashboard } from "lucide-react";
 import { toast } from "sonner";
+
+import { Button } from "@/components/ui/button";
+import { api } from "@/convex/_generated/api";
+import { useApiMutation } from "@/hooks/use-api-mutation";
 
 export const EmptyBoards = () => {
   const { organization } = useOrganization();
