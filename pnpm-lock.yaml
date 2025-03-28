@@ -11,6 +11,12 @@ importers:
       '@clerk/nextjs':
         specifier: ^6.12.4
         version: 6.12.4(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@liveblocks/client':
+        specifier: ^2.22.1
+        version: 2.22.1
+      '@liveblocks/react':
+        specifier: ^2.22.1
+        version: 2.22.1(react@19.0.0)
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.6
         version: 1.1.6(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -477,6 +483,17 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
+
+  '@liveblocks/client@2.22.1':
+    resolution: {integrity: sha512-XjLmgJT2QXNEW/ukJbFl3B7TJ6WDdTMfwzWaxiwGM/zf6Zq9OVPQSLjtaZl2B6bUnbUO83BpBF7e+WdMXFIiWQ==}
+
+  '@liveblocks/core@2.22.1':
+    resolution: {integrity: sha512-WESI78vsXKf6asVZjJNwqlovALYyK13bTzYIvJpha5L7jh6WOfU5ayQH3YF+2du7SktHmxMHByLxRDUWb2lgdw==}
+
+  '@liveblocks/react@2.22.1':
+    resolution: {integrity: sha512-8ZOusPDx1N40TrR0St/r77rPjJgFfX2uupwd+yG56GJFvUnhDOldbHc+IQGQEh+xekHMmB4THfxhWjaMfHgbkA==}
+    peerDependencies:
+      react: ^18 || ^19 || ^19.0.0-rc
 
   '@next/env@15.2.1':
     resolution: {integrity: sha512-JmY0qvnPuS2NCWOz2bbby3Pe0VzdAQ7XpEB6uLIHmtXNfAsAO0KLQLkuAoc42Bxbo3/jMC3dcn9cdf+piCcG2Q==}
@@ -2688,6 +2705,18 @@ snapshots:
 
   '@img/sharp-win32-x64@0.33.5':
     optional: true
+
+  '@liveblocks/client@2.22.1':
+    dependencies:
+      '@liveblocks/core': 2.22.1
+
+  '@liveblocks/core@2.22.1': {}
+
+  '@liveblocks/react@2.22.1(react@19.0.0)':
+    dependencies:
+      '@liveblocks/client': 2.22.1
+      '@liveblocks/core': 2.22.1
+      react: 19.0.0
 
   '@next/env@15.2.1': {}
 
