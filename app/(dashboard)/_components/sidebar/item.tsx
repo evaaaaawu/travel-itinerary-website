@@ -6,7 +6,7 @@ import {
 } from "@clerk/nextjs";
 import Image from "next/image";
 
-import { Hint } from "@/components/ui/hint";
+import { Hint } from "@/components/hint";
 import { cn } from "@/lib/utils";
 
 interface ItemProps {
