@@ -12,7 +12,6 @@ import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { cn } from "@/lib/utils";
 
-
 interface BoardCardProps {
   id: string;
   title: string;

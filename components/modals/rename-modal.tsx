@@ -18,7 +18,6 @@ import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { useRenameModal } from "@/store/use-rename-modal";
 
-
 export const RenameModal = () => {
   const { mutate, pending } = useApiMutation(api.board.update);
 

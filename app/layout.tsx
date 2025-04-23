@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-
 import { Geist, Geist_Mono } from "next/font/google";
-
 import "./globals.css";
 import { Toaster } from "sonner";
 
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { ModalProvider } from "@/providers/modal-provider";
+
+import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

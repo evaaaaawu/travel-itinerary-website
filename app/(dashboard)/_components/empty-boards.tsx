@@ -1,12 +1,12 @@
 "use client";
 
-import { LayoutDashboard } from "lucide-react";
-import { toast } from "sonner";
 import { useOrganization } from "@clerk/nextjs";
+import { LayoutDashboard } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
-import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
+import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 
 export const EmptyBoards = () => {

@@ -29,7 +29,7 @@ export const Item = ({ id, name, imageUrl }: ItemProps) => {
       <Hint 
         label={name}
         side="right"
-        align="start" 
+        align="center"
         sideOffset={5}
       >
         <Image

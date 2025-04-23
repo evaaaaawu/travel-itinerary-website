@@ -18,7 +18,7 @@ export const InviteButton = () => {
           Invite members
         </Button>
       </DialogTrigger>
-      <DialogContent className="flex items-center justify-center shadow-none border-none h-[80%]">
+      <DialogContent className="flex items-center justify-center w-0 h-0 border-none shadow-none">
         <DialogTitle className="sr-only">Invite members</DialogTitle>
         <OrganizationProfile routing="hash" />
       </DialogContent>
